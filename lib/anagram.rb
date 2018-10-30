@@ -3,4 +3,8 @@ class Anagram
   def initialize(anagram)
     @anagram = anagram
   end
+
+  def match(words, anagram)
+  words.find_all {|word| word.chars.sort.join == anagram.chars.sort.join}
+end
 end
